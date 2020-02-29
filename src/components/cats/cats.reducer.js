@@ -25,6 +25,7 @@ const reducer = (state = initialState, action) => {
         fetching: false,
         fetched: true,
         error: {},
+        // resp: []
         resp: [...state.resp, ...action.payload.data]
       };
     }

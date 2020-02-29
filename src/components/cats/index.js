@@ -14,6 +14,7 @@ import ModalCard from "../card/ModalCard";
 import CatCard from "../card";
 import Navbar from "../Navbar";
 
+
 const App = ({ getCats }) => {
   const [paginate, setPaginate] = useState({
     currentPage: 1,
@@ -50,10 +51,12 @@ const App = ({ getCats }) => {
   );
   const formattedError = onError ? retrieveMessage(error) : "";
   useEffect(() => {
-    catBreeds.forEach(item => {
-      getCats(item);
-    });
-  }, []);
+    if (resp.length < 30) {
+      catBreeds.forEach(item => {
+        getCats(item);
+      });
+    }
+  }, [resp, getCats]);
   const lastItemIndex = paginate.currentPage * paginate.itemsCountPerPage;
   const firstItemIndex = lastItemIndex - paginate.itemsCountPerPage;
   const currentCats = resp.slice(firstItemIndex, lastItemIndex);

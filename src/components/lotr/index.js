@@ -32,7 +32,7 @@ const App = ({ getLOTR }) => {
   const formattedError = onError ? retrieveMessage(error) : "";
   useEffect(() => {
     getLOTR();
-  }, []);
+  }, [getLOTR]);
 
   const lastItemIndex = paginate.currentPage * paginate.itemsCountPerPage;
   const firstItemIndex = lastItemIndex - paginate.itemsCountPerPage;

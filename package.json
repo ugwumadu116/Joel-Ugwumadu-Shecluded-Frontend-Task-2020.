@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ugwumadu116.github.io/Joel-Ugwumadu-Shecluded-Frontend-Task-2020.",
+  "homepage": "https://ugwumadu116.github.io/Joel-Ugwumadu-Shecluded-Frontend-Task-2020.",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
