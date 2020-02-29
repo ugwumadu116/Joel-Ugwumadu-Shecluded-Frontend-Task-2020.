@@ -2,15 +2,19 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ugwumadu116.github.io/Joel-Ugwumadu-Shecluded-Frontend-Task-2020.",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.19.0",
     "formik": "^2.1.2",
+    "gh-pages": "^2.2.0",
     "install": "^0.13.0",
     "react": "^16.12.0",
     "react-animated-modal": "^1.1.1",
