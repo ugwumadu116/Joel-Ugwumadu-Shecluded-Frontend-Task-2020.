@@ -1,7 +1,8 @@
 import React, { lazy, Fragment } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { Container } from "./elements";
+const Navbar = lazy(() => import("../Navbar"));
+const Hero = lazy(() => import("./Hero"));
 
 const Home = () => {
   return (
@@ -21,10 +22,8 @@ const Home = () => {
         <meta property="og:description" content="" />
       </Helmet>
       <Container>
-        <div>
-          <Link to="/cats">View Cats</Link>
-          <Link to="/lotr">View LOTR</Link>
-        </div>
+        <Navbar />
+        <Hero />
       </Container>
     </Fragment>
   );

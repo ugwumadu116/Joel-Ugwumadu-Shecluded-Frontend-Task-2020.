@@ -2,9 +2,9 @@ import React from "react";
 import { Card } from "./elements";
 
 
-const App = ({ cat, i, openModal }) => {
+const App = ({ cat, openModal }) => {
   return (
-    <Card key={`${i}${cat.id}`}>
+    <Card >
       <div className="cat-image-wrapper">
         <img src={cat.url} alt="cat" />
       </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import InViewMonitor from "react-inview-monitor";
 import { Container, PaginateWrapper } from "./elements";
 import getCats from "./cats.action";
 import Notification from "../notification";
@@ -11,6 +12,7 @@ import Modal from "react-animated-modal";
 import Pagination from "react-js-pagination";
 import ModalCard from "../card/ModalCard";
 import CatCard from "../card";
+import Navbar from "../Navbar";
 
 const App = ({ getCats }) => {
   const [paginate, setPaginate] = useState({
@@ -77,10 +79,17 @@ const App = ({ getCats }) => {
             <meta property="og:site_name" content="LOTR" />
             <meta property="og:image" content="" />
           </Helmet>
+          <Navbar />
 
           <Container>
             {currentCats.map((cat, i) => (
-              <CatCard cat={cat} i={i} openModal={openModal} />
+              <InViewMonitor
+                key={`${i}${cat.id}`}
+                classNameNotInView="vis-hidden"
+                classNameInView={`animated fadeInUp`}
+              >
+                <CatCard cat={cat} openModal={openModal} />
+              </InViewMonitor>
             ))}
           </Container>
           <PaginateWrapper>

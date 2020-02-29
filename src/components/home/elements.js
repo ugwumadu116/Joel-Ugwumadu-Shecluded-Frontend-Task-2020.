@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
-
+import HeroImage from "../../assets/hero.jpg";
 const ascend = keyframes`
   from {
     transform: translateY(20px);
@@ -13,14 +13,16 @@ const ascend = keyframes`
 `;
 
 export const Container = styled.div`
-  background-color: #f2f8ff;
+  background: url(${HeroImage}) no-repeat center;
+  background-size: cover;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   a {
     margin: 20px;
+  }
+  .d-flex {
+    display: flex;
+    align-items: center;
   }
 `;
 
