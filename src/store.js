@@ -11,7 +11,7 @@ import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 const middleware = applyMiddleware(errorMiddleware, thunk, promise);
 const enhancer = composeWithDevTools(middleware);
 const persistConfig = {
-  key: "lotr",
+  key: "myapp",
   storage,
   stateReconciler: hardSet
 };

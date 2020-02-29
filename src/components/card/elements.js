@@ -18,7 +18,6 @@ export const Card = styled.div`
     color: #000000;
   }
   .temperament-wrapper {
-    /* display:flex; */
     .temperament {
       font-style: normal;
       font-weight: normal;
@@ -106,31 +105,5 @@ export const CardModal = styled.div`
   }
   @media (max-width: 601px) {
     width: 90%;
-  }
-`;
-
-export const PaginateWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 10px;
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 300px;
-    border: solid whitesmoke 2px;
-    border-radius: 7px;
-    li {
-      border: solid whitesmoke 2px;
-      width: 100%;
-      height: 30px;
-
-      text-align: center;
-    }
-    .active {
-      background: linear-gradient(105.88deg, #f41313 -28.55%, #f90178 125.13%);
-    }
   }
 `;

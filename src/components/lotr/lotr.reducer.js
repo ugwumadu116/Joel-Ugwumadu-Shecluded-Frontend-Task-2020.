@@ -1,4 +1,4 @@
-import { CAT_INFO } from "./constants/actionTypes";
+import { LOTR_INFO } from "./constants/actionTypes";
 
 const initialState = {
   fetching: false,
@@ -10,7 +10,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case CAT_INFO.pending: {
+    case LOTR_INFO.pending: {
       return {
         ...state,
         fetching: true,
@@ -19,16 +19,16 @@ const reducer = (state = initialState, action) => {
         error: {}
       };
     }
-    case CAT_INFO.fulfilled: {
+    case LOTR_INFO.fulfilled: {
       return {
         ...state,
         fetching: false,
         fetched: true,
         error: {},
-        resp: [...state.resp, ...action.payload.data]
+        resp: action.payload.data.docs
       };
     }
-    case CAT_INFO.rejected: {
+    case LOTR_INFO.rejected: {
       return {
         ...state,
         fetching: false,
