@@ -10,7 +10,7 @@ export const LOTRCArd = styled.div`
   .d-flex {
     display: flex;
     align-items: center;
-    margin:10px 0;
+    margin: 10px 0;
   }
   .topic-wrapper {
     display: flex;
@@ -28,8 +28,8 @@ export const LOTRCArd = styled.div`
     font-size: 15px;
     line-height: 23px;
     color: #000000;
-    opacity:0.8;
-    margin-right:10px;
+    opacity: 0.8;
+    margin: 0 10px;
   }
   .value {
     font-style: normal;
@@ -37,5 +37,8 @@ export const LOTRCArd = styled.div`
     font-size: 15px;
     line-height: 20px;
     color: #c4c4c4;
+  }
+  @media (max-width: 601px) {
+    width: 80%;
   }
 `;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import InViewMonitor from "react-inview-monitor";
 import { Container, PaginateWrapper } from "../cats/elements";
 import { LOTRCArd } from "./elements";
 import getLOTR from "./lotr.action";
@@ -8,6 +9,9 @@ import { Helmet } from "react-helmet-async";
 import { connect, useSelector } from "react-redux";
 import { retrieveMessage } from "../../utils/helpers";
 import Pagination from "react-js-pagination";
+import { FaBirthdayCake, FaUserAlt } from "react-icons/fa";
+import { GiDeathSkull } from "react-icons/gi";
+import Navbar from "../Navbar";
 
 const App = ({ getLOTR }) => {
   const [paginate, setPaginate] = useState({
@@ -52,27 +56,37 @@ const App = ({ getLOTR }) => {
             <meta property="og:site_name" content="LOTR" />
             <meta property="og:image" content="" />
           </Helmet>
+          <Navbar />
 
           <Container>
             {currentCats.map(item => (
-              <LOTRCArd key={item._id}>
-                <div className="topic-wrapper">
-                  <h1 className="topic">{item.name}</h1>
-                  <h1 className="topic">{item.gender}</h1>
-                </div>
-                <div className="d-flex">
-                  <h1 className="key">Birth</h1>
-                  <p className="value">{item.birth}</p>
-                </div>
-                <div className="d-flex">
-                  <h1 className="key">Spouse</h1>
-                  <p className="value">{item.spouse} </p>
-                </div>
-                <div className="d-flex">
-                  <h1 className="key">Death</h1>
-                  <p className="value">{item.death} </p>
-                </div>
-              </LOTRCArd>
+              <InViewMonitor
+                key={item._id}
+                classNameNotInView="vis-hidden"
+                classNameInView={`animated fadeInUp`}
+              >
+                <LOTRCArd>
+                  <div className="topic-wrapper">
+                    <h1 className="topic">{item.name}</h1>
+                    <h1 className="topic">{item.gender}</h1>
+                  </div>
+                  <div className="d-flex">
+                    <FaBirthdayCake color="#f41313" />
+                    <h1 className="key">Birth:</h1>
+                    <p className="value">{item.birth}</p>
+                  </div>
+                  <div className="d-flex">
+                    <FaUserAlt color="#f41313" />
+                    <h1 className="key">Spouse:</h1>
+                    <p className="value">{item.spouse} </p>
+                  </div>
+                  <div className="d-flex">
+                    <GiDeathSkull color="#f41313" />
+                    <h1 className="key">Death:</h1>
+                    <p className="value">{item.death} </p>
+                  </div>
+                </LOTRCArd>
+              </InViewMonitor>
             ))}
           </Container>
           <PaginateWrapper>

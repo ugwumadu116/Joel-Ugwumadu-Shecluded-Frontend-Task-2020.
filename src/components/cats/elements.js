@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* max-width: 1140px; */
   margin: 0 auto;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  height: 90vh;
+  height: 80vh;
   overflow-x: hidden;
   ::-webkit-scrollbar {
     display: none;
