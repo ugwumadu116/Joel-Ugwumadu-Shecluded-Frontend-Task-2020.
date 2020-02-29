@@ -1,65 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { Container, PaginateWrapper } from "./elements";
-import getCats from "./cats.action";
+import { Container, PaginateWrapper } from "../cats/elements";
+import { LOTRCArd } from "./elements";
+import getLOTR from "./lotr.action";
 import Notification from "../notification";
 import Loading from "../loading";
 import { Helmet } from "react-helmet-async";
 import { connect, useSelector } from "react-redux";
-import { catBreeds } from "./constants/breeds";
 import { retrieveMessage } from "../../utils/helpers";
-import Modal from "react-animated-modal";
 import Pagination from "react-js-pagination";
-import ModalCard from "../card/ModalCard";
-import CatCard from "../card";
 
-const App = ({ getCats }) => {
+const App = ({ getLOTR }) => {
   const [paginate, setPaginate] = useState({
     currentPage: 1,
     itemsCountPerPage: 8
   });
-  const [showModal, setShowModal] = useState(false);
-  const [catDetail, setCatDetail] = useState({
-    url: "",
-    breeds: [
-      {
-        name: "",
-        temperament: "",
-        life_span: "",
-        dog_friendly: "",
-        child_friendly: "",
-        shedding_level: ""
-      }
-    ]
-  });
 
   const handlePageChang = pageNumber => {
-    setPaginate({ ...paginate, currentPage: pageNumber });
+    setPaginate({
+      ...paginate,
+      currentPage: pageNumber
+    });
   };
 
-  const openModal = catData => {
-    setShowModal(true);
-    setCatDetail(catData);
-  };
-  const closeModal = () => {
-    setShowModal(false);
-  };
   const { fetching, fetched, onError, error, resp } = useSelector(
-    ({ cats }) => cats
+    ({ lotr }) => lotr
   );
   const formattedError = onError ? retrieveMessage(error) : "";
   useEffect(() => {
-    catBreeds.forEach(item => {
-      getCats(item);
-    });
+    getLOTR();
   }, []);
+
   const lastItemIndex = paginate.currentPage * paginate.itemsCountPerPage;
   const firstItemIndex = lastItemIndex - paginate.itemsCountPerPage;
   const currentCats = resp.slice(firstItemIndex, lastItemIndex);
   return (
     <>
-      <Modal visible={showModal} closemodal={closeModal} type="zoomIn">
-        <ModalCard catDetail={catDetail} />
-      </Modal>
       {fetching && <Loading />}
       {onError && (
         <div>
@@ -69,18 +44,35 @@ const App = ({ getCats }) => {
       {fetched && !fetching && (
         <>
           <Helmet>
-            <title>Cat list</title>
+            <title>LOTR list</title>
             <meta
               name="description"
-              content="This page display a list of cat images and their description"
+              content="This page displays Lord Of The Ring characters and description about them."
             />
             <meta property="og:site_name" content="LOTR" />
             <meta property="og:image" content="" />
           </Helmet>
 
           <Container>
-            {currentCats.map((cat, i) => (
-              <CatCard cat={cat} i={i} openModal={openModal} />
+            {currentCats.map(item => (
+              <LOTRCArd key={item._id}>
+                <div className="topic-wrapper">
+                  <h1 className="topic">{item.name}</h1>
+                  <h1 className="topic">{item.gender}</h1>
+                </div>
+                <div className="d-flex">
+                  <h1 className="key">Birth</h1>
+                  <p className="value">{item.birth}</p>
+                </div>
+                <div className="d-flex">
+                  <h1 className="key">Spouse</h1>
+                  <p className="value">{item.spouse} </p>
+                </div>
+                <div className="d-flex">
+                  <h1 className="key">Death</h1>
+                  <p className="value">{item.death} </p>
+                </div>
+              </LOTRCArd>
             ))}
           </Container>
           <PaginateWrapper>
@@ -99,7 +91,7 @@ const App = ({ getCats }) => {
 };
 
 const mapDispatchToProps = {
-  getCats
+  getLOTR
 };
 
 export default connect(null, mapDispatchToProps)(App);
