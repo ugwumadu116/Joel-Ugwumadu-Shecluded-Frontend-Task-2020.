@@ -26,3 +26,7 @@ code {
   height: 56px;
   margin: 0px auto;
 }
+
+.react-modal-body {
+  width: fit-content !important;
+}

@@ -15,11 +15,13 @@ const ascend = keyframes`
 export const Container = styled.div`
   background-color: #f2f8ff;
   width: 100%;
-  ${({ white }) =>
-    white &&
-    css`
-      background-color: #ffffff;
-    `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  a {
+    margin: 20px;
+  }
 `;
 
 export const SectionOne = styled.section`
@@ -36,8 +38,6 @@ export const SectionOne = styled.section`
       padding-top: 0;
     `}
 `;
-
-
 
 export const BigTitle = styled.h1`
   font-size: 3.75rem;
@@ -67,4 +67,3 @@ export const BigSubTitle = styled.h2`
   font-family: "Inter";
   animation: ${ascend} 3s linear 0s 1;
 `;
-
