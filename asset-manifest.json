@@ -1,0 +1,42 @@
+{
+  "files": {
+    "static/js/0.ae0992e1.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/0.ae0992e1.chunk.js",
+    "static/js/0.ae0992e1.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/0.ae0992e1.chunk.js.map",
+    "static/js/1.aecff58c.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/1.aecff58c.chunk.js",
+    "static/js/1.aecff58c.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/1.aecff58c.chunk.js.map",
+    "main.css": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/css/main.b107ac5b.chunk.css",
+    "main.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/main.faba8ad8.chunk.js",
+    "main.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/main.faba8ad8.chunk.js.map",
+    "runtime-main.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/runtime-main.dd506cbc.js",
+    "runtime-main.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/runtime-main.dd506cbc.js.map",
+    "static/js/4.173aca52.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/4.173aca52.chunk.js",
+    "static/js/4.173aca52.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/4.173aca52.chunk.js.map",
+    "static/js/5.f626d5cf.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/5.f626d5cf.chunk.js",
+    "static/js/5.f626d5cf.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/5.f626d5cf.chunk.js.map",
+    "static/js/6.db21f3f8.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/6.db21f3f8.chunk.js",
+    "static/js/6.db21f3f8.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/6.db21f3f8.chunk.js.map",
+    "static/js/7.265ea753.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/7.265ea753.chunk.js",
+    "static/js/7.265ea753.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/7.265ea753.chunk.js.map",
+    "static/js/8.9e85b7d2.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/8.9e85b7d2.chunk.js",
+    "static/js/8.9e85b7d2.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/8.9e85b7d2.chunk.js.map",
+    "static/js/9.194aec1b.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/9.194aec1b.chunk.js",
+    "static/js/9.194aec1b.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/9.194aec1b.chunk.js.map",
+    "static/js/10.a69de00c.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/10.a69de00c.chunk.js",
+    "static/js/10.a69de00c.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/10.a69de00c.chunk.js.map",
+    "static/js/11.535e0458.chunk.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/11.535e0458.chunk.js",
+    "static/js/11.535e0458.chunk.js.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/11.535e0458.chunk.js.map",
+    "index.html": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./index.html",
+    "precache-manifest.b6d4864e222c10f0376ea02d94e31c01.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./precache-manifest.b6d4864e222c10f0376ea02d94e31c01.js",
+    "service-worker.js": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./service-worker.js",
+    "static/css/main.b107ac5b.chunk.css.map": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/css/main.b107ac5b.chunk.css.map",
+    "static/js/11.535e0458.chunk.js.LICENSE.txt": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/11.535e0458.chunk.js.LICENSE.txt",
+    "static/js/4.173aca52.chunk.js.LICENSE.txt": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/js/4.173aca52.chunk.js.LICENSE.txt",
+    "static/media/hero.jpg": "/Joel-Ugwumadu-Shecluded-Frontend-Task-2020./static/media/hero.1ac80f29.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd506cbc.js",
+    "static/js/4.173aca52.chunk.js",
+    "static/css/main.b107ac5b.chunk.css",
+    "static/js/main.faba8ad8.chunk.js"
+  ]
+}
